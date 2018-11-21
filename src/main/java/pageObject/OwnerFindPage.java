@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.waits.CustomWait;
 
-public class FindOwnerPage {
+public class OwnerFindPage {
 
     private WebDriver driver;
     private CustomWait waits;
@@ -14,13 +14,13 @@ public class FindOwnerPage {
     @FindBy(id = "lastName")
     private WebElement lastNameFieldElement;
 
-    @FindBy(xpath = "//button[[contains(text(),'Find Owner')]")
+    @FindBy(xpath = "//button[@type='submit']")
     private WebElement findOwnerButton;
 
-    @FindBy(xpath = "//a[@href='/owners/new'")
+    @FindBy(xpath = "//a[@href='/owners/new']")
     private WebElement addOwnerButton;
 
-    public FindOwnerPage(WebDriver driver){
+    public OwnerFindPage(WebDriver driver){
         this.driver = driver;
         waits = new CustomWait(driver);
         PageFactory.initElements(driver, this);
@@ -28,7 +28,6 @@ public class FindOwnerPage {
 
     public void searchOwnerByLastName(){
         lastNameFieldElement.sendKeys("Franklin");
-        waits.waitForElementToBeClickable(findOwnerButton);
         findOwnerButton.click();
     }
 
