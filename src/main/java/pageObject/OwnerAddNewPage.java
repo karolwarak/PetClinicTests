@@ -29,10 +29,19 @@ public class OwnerAddNewPage {
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement addOwnerButton;
 
-    public OwnerAddNewPage(WebDriver driver){
-        this.driver = driver;
-        waits = new CustomWait(driver);
-        PageFactory.initElements(driver, this);
+    public void inputOwnerInformationForm(String name, String surname,
+                                          String address, String city,
+                                          String telephone){
+
+        firstNameField.sendKeys(name);
+        lastNameField.sendKeys(surname);
+        addressNameField.sendKeys(address);
+        cityNameField.sendKeys(city);
+        telephoneNameField.sendKeys(telephone);
+    }
+
+    public void clickAddOwnerAfterFillInForm(){
+        addOwnerButton.click();
     }
 
 
