@@ -37,7 +37,7 @@ public class SearchOwnerTest {
         ownerFindPage.searchOwnerByLastName();
 
         assertThat(ownerInformationPage.getOwnerNameAndSurname())
-                .as("Owner Franklin should be find")
+                .as("Owner Franklin was not find")
                 .endsWith("Franklin");
     }
 

@@ -14,6 +14,9 @@ public class OwnerInformationPage {
     @FindBy (xpath = "//b[contains(text(),'George Franklin')]")
     private WebElement ownerNameAndSurname;
 
+    @FindBy (xpath = "//h2[contains(text(),'Owner Information')]")
+    private WebElement ownerInformationHeader;
+
     public OwnerInformationPage(WebDriver driver){
         this.driver = driver;
         waits = new CustomWait(driver);
@@ -23,5 +26,7 @@ public class OwnerInformationPage {
     public String getOwnerNameAndSurname(){
         return ownerNameAndSurname.getText();
     }
+
+    public String getOwnerInformatonHeaderText(){ return ownerInformationHeader.getText();}
 
 }
