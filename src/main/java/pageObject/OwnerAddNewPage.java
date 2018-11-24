@@ -31,7 +31,6 @@ public class OwnerAddNewPage {
 
     public OwnerAddNewPage(WebDriver driver){
         this.driver = driver;
-        waits = new CustomWait(driver);
         PageFactory.initElements(driver, this);
     }
 

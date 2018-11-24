@@ -22,7 +22,6 @@ public class OwnerFindPage {
 
     public OwnerFindPage(WebDriver driver){
         this.driver = driver;
-        waits = new CustomWait(driver);
         PageFactory.initElements(driver, this);
     }
 

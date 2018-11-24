@@ -19,7 +19,6 @@ public class OwnerInformationPage {
 
     public OwnerInformationPage(WebDriver driver){
         this.driver = driver;
-        waits = new CustomWait(driver);
         PageFactory.initElements(driver, this);
     }
 
@@ -28,5 +27,4 @@ public class OwnerInformationPage {
     }
 
     public String getOwnerInformatonHeaderText(){ return ownerInformationHeader.getText();}
-
 }
