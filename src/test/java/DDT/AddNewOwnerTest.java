@@ -38,6 +38,10 @@ public class AddNewOwnerTest {
         };
     }
 
+
+    // add reading data in json using jackson lib !!!
+
+
     @Before
     public void setUp() {
         driver = new WebDriverProvider(WebDriverCreators.CHROME).getDriver();
@@ -61,7 +65,7 @@ public class AddNewOwnerTest {
 
         assertThat(ownerInformationPage.getOwnerInformatonHeaderText())
                 .as("User was not created")
-                .isEqualTo("Owner Information");
+                .isEqualTo("dataGenerator.Owner Information");
     }
 
     @After

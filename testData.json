@@ -1,0 +1,32 @@
+{
+  "testObjects": [
+    {
+      "name": "Jan1",
+      "surname": "Kowalski1",
+      "address": "Chlopska1",
+      "city": "Jan1@gmail.com",
+      "telephone": "123456789"
+    },
+    {
+      "name": "Jan2",
+      "surname": "Kowalski2",
+      "address": "Chlopska2",
+      "city": "Jan2@gmail.com",
+      "telephone": "123456788"
+    },
+    {
+      "name": "Jan3",
+      "surname": "Kowalski3",
+      "address": "Chlopska3",
+      "city": "Jan3@gmail.com",
+      "telephone": "123456787"
+    },
+    {
+      "name": "Jan4",
+      "surname": "Kowalski4",
+      "address": "Chlopska4",
+      "city": "Jan4@gmail.com",
+      "telephone": "123456786"
+    }
+  ]
+}
