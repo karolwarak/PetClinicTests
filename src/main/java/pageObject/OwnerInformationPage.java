@@ -14,7 +14,7 @@ public class OwnerInformationPage {
     @FindBy (xpath = "//b[contains(text(),'George Franklin')]")
     private WebElement ownerNameAndSurname;
 
-    @FindBy (xpath = "//h2[contains(text(),'dataGenerator.Owner Information')]")
+    @FindBy (xpath = "//div[@class='container xd-container']//table[1]//b[1]")
     private WebElement ownerInformationHeader;
 
     public OwnerInformationPage(WebDriver driver){

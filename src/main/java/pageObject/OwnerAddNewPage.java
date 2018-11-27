@@ -1,5 +1,6 @@
 package pageObject;
 
+import dataGenerator.Owner;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,15 +35,13 @@ public class OwnerAddNewPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void inputOwnerInformationForm(String name, String surname,
-                                          String address, String city,
-                                          String telephone){
+    public void inputOwnerInformationForm(Owner owner){
 
-        firstNameField.sendKeys(name);
-        lastNameField.sendKeys(surname);
-        addressNameField.sendKeys(address);
-        cityNameField.sendKeys(city);
-        telephoneNameField.sendKeys(telephone);
+        firstNameField.sendKeys(owner.getName());
+        lastNameField.sendKeys(owner.getSurname());
+        addressNameField.sendKeys(owner.getAddress());
+        cityNameField.sendKeys(owner.getCity());
+        telephoneNameField.sendKeys(owner.getTelephone());
     }
 
     public void clickAddOwnerAfterFillInForm(){
